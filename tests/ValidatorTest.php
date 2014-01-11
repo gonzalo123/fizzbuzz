@@ -8,7 +8,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
 
     public function get_data_provider_validator()
     {
-        return array(
+        return [
             // Testing Fizz Validator
             ['when' => 1, 'returns' => null, 'validator' => new Fizz()],
             ['when' => 2, 'returns' => null, 'validator' => new Fizz()],
@@ -31,7 +31,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
             ['when' => 8, 'returns' => null, 'validator' => new Buzz()],
             ['when' => 9, 'returns' => null, 'validator' => new Buzz()],
             ['when' => 10, 'returns' => 'Buzz', 'validator' => new Buzz()],
-        );
+        ];
     }
 
     /** @dataProvider get_data_provider_validator */

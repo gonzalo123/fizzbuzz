@@ -19,11 +19,18 @@ class FizzBuzz
         $this->validators[] = $validator;
     }
 
+    public function iterator()
+    {
+        foreach ($this->inputRange as $item) {
+            yield $this->renderItemForValue($item);
+        }
+    }
+
     public function getOutput()
     {
         $output = [];
-        foreach ($this->inputRange as $item) {
-            $output[] = $this->renderItemForValue($item);
+        foreach ($this->iterator() as $item) {
+            $output[] = $item;
         }
 
         return $output;
