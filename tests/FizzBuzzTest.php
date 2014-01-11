@@ -19,7 +19,6 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
             'buzz'          => ['fizzBuzz' => $this->getFizzBuzz_Buzz(range(1, 10)), 'expected' => [1, 2, 3, 4, 'Buzz', 6, 7, 8, 9, 'Buzz']],
             'fizzBuzz'      => ['fizzBuzz' => $this->getFizzBuzz_FizzBuzz(range(1, 10)), 'expected' => [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz']],
             'fizzBuzz both' => ['fizzBuzz' => $this->getFizzBuzz_FizzBuzz(range(11, 20)), 'expected' => [11, 'Fizz', 13, 14, 'FizzBuzz', 16, 17, 'Fizz', 19, 'Buzz']],
-
         ];
     }
 
